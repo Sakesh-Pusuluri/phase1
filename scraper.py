@@ -10,7 +10,7 @@ from twitter import Twitter
 from tweet_preprocessor import TWPreprocessor
 from indexer import Indexer
 
-reply_collection_knob = False
+reply_collection_knob = True
 
 
 def read_config():
@@ -88,6 +88,7 @@ def main():
             print("------------ process complete -----------------------------------")
 
     if reply_collection_knob:
+        print('*--'*50)
         # Write a driver logic for reply collection, use the tweets from the data files for which the replies are to collected.
         preprocessed_tweets=[]
         count=0
